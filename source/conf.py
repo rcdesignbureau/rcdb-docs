@@ -1,3 +1,4 @@
+import datetime as dt
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -7,8 +8,8 @@
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'RC Design Bureau'
-copyright = "2024, RC Design Bureau"
-author = "Alessandro Bonecchi, Antonio O'Hara"
+copyright = f"{dt.datetime.now().strftime('%Y')}, RC Design Bureau" # Updates the copyright to the current year
+author = "Alessandro Bonecchi, Antonio O'Hara, Eddie O'Hara, Johann Webber at RC Design Bureau"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -24,4 +25,3 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
-html_static_path = ['_static']
