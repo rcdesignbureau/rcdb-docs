@@ -14,6 +14,7 @@ This is the documentation website for the RC Design Bureau! Read the materials h
 Contents
 ========
 .. toctree::
+   our_truck
    install_guide
    software_troubleshooting
    hardware_troubleshooting

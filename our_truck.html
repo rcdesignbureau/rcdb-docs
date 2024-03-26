@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Our Truck" href="our_truck.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Install Guide" href="install_guide.html" /><link rel="prev" title="Welcome to RC Design Bureau’s documentation!" href="index.html" />
 
     <!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
-        <title>RC Design Bureau documentation</title>
+        <title>Our Truck - RC Design Bureau documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">RC Design Bureau  documentation</div></a>
+      <a href="index.html"><div class="brand">RC Design Bureau  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">RC Design Bureau  documentation</span>
@@ -154,8 +154,8 @@
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul>
-<li class="toctree-l1"><a class="reference internal" href="our_truck.html">Our Truck</a></li>
+  <ul class="current">
+<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Our Truck</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_guide.html">Install Guide</a></li>
 <li class="toctree-l1"><a class="reference internal" href="software_troubleshooting.html">Software Troubleshooting</a></li>
 <li class="toctree-l1"><a class="reference internal" href="hardware_troubleshooting.html">Hardware Troubleshooting</a></li>
@@ -193,36 +193,52 @@
           </label>
         </div>
         <article role="main">
-          <section id="welcome-to-rc-design-bureau-s-documentation">
-<h1>Welcome to RC Design Bureau’s documentation!<a class="headerlink" href="#welcome-to-rc-design-bureau-s-documentation" title="Permalink to this heading">#</a></h1>
-<section id="intro">
-<h2>Intro<a class="headerlink" href="#intro" title="Permalink to this heading">#</a></h2>
-<p>This is the documentation website for the RC Design Bureau! Read the materials here if you run into any problems or are installing for the first time!</p>
+          <section id="our-truck">
+<h1>Our Truck<a class="headerlink" href="#our-truck" title="Permalink to this heading">#</a></h1>
+<p><strong>This project seeks to take an RC offroad race truck and make it drive itself!</strong></p>
+<section id="software">
+<h2>Software<a class="headerlink" href="#software" title="Permalink to this heading">#</a></h2>
+<section id="python">
+<h3>Python<a class="headerlink" href="#python" title="Permalink to this heading">#</a></h3>
+<p>The main driving portion of the code, the one which interacts with the GPIO is written in Python.
+This is due to the fact that Python is well-supported with GPIO libraries. Python is also used to write the logs to the web server page.</p>
 </section>
-<section id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this heading">#</a></h2>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="our_truck.html">Our Truck</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="our_truck.html#software">Software</a></li>
-<li class="toctree-l2"><a class="reference internal" href="our_truck.html#hardware">Hardware</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="install_guide.html">Install Guide</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="install_guide.html#radxa-rock-5b">Radxa ROCK 5B</a></li>
-<li class="toctree-l2"><a class="reference internal" href="install_guide.html#raspberry-pi-5-model-b">Raspberry Pi 5 Model B</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="software_troubleshooting.html">Software Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="software_troubleshooting.html#commonly-encountered-errors">Commonly Encountered Errors</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="hardware_troubleshooting.html">Hardware Troubleshooting</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="hardware_troubleshooting.html#commonly-encountered-errors">Commonly Encountered Errors</a></li>
-</ul>
-</li>
-</ul>
-</div>
+<section id="rust">
+<h3>Rust<a class="headerlink" href="#rust" title="Permalink to this heading">#</a></h3>
+<p>Rust is used to write nearly everything else on the car, namely the server software and the vision, the two things that
+need to be well-optimized. These things could not be written in Python, so they are written in Rust with FFI bindings that
+allows them to be called in the main Python code.</p>
+</section>
+<section id="os">
+<h3>OS<a class="headerlink" href="#os" title="Permalink to this heading">#</a></h3>
+<p>Our SBC (Single-Board Computer) for this project runs Ubuntu 22.04 Minimal with Linux kernel 5.10-rockchip. It has KDE plasma installed on
+it if plugging a monitor in would ever be necessary. Running Linux on a robot controller versus another operating system such as Android
+(present on REV Robotics Control Hubs) has many advantages, such as being able to compile Rust code on the SBC itself, rather than having to
+upload pre-compiled binaries and thus have to install bulky GNU ARM toolchains to an x86_64 PC.</p>
+</section>
+</section>
+<section id="hardware">
+<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading">#</a></h2>
+<section id="truck">
+<h3>Truck<a class="headerlink" href="#truck" title="Permalink to this heading">#</a></h3>
+<p>For this project, our choice of RC platform was different from most comparable projects, since we did not build
+on top of a <a class="reference external" href="https://traxxas.com/products/showroom?f[0]=field_type%3A250">Traxxas Slash 4x4</a> variant, instead choosing a kit-only race chassis,
+the <a class="reference external" href="https://www.teknorc.com/shop/tkr5507-sct410-3-110th-4wd-competition-short-course-truck">Tekno RC SCT410.3</a>. This chassis, although belonging
+to the same 4wd SCT category as the Traxxas Slash 4x4, has a much lower center of gravity, larger bore oil-filled shocks, coarser gear pitch to handle
+much more motor load and power, and has much more rigid bumpers and crash bars.</p>
+</section>
+<section id="compute-element">
+<h3>Compute Element<a class="headerlink" href="#compute-element" title="Permalink to this heading">#</a></h3>
+<p>Here, we used a <a class="reference external" href="https://radxa.com/products/rock5/5b/">Radxa ROCK 5B</a> (8GB RAM) as our robot controller. This single-board computer has plenty of
+processing power, possessing an 8-core CPU, 1 TFLOPS GPU, and 6 TOPS NPU for AI processing. In order to be able to efficiently run two OpenCV camera
+streams in tandem, we had to pick a board that had the highest performance per watt in its category. The ROCK 5B’s GPIO pins make it easy to control
+the PWM motor controller and servo on the truck, allowing us to directly modify the throttle or steering position from code.</p>
+</section>
+<section id="d-printed-parts">
+<h3>3D Printed Parts<a class="headerlink" href="#d-printed-parts" title="Permalink to this heading">#</a></h3>
+<p>Naturally, for such a project, next to none of the custom parts we needed were already designed by others. Due to this project, to our knowledge, being
+the only one of its kind to not utilize a Traxxas chassis, we had to design all the brackets and mounts for the webcams and compute element ourselves.</p>
+</section>
 </section>
 </section>
 
@@ -231,16 +247,26 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="our_truck.html">
+          <a class="next-page" href="install_guide.html">
               <div class="page-info">
                 <div class="context">
                   <span>Next</span>
                 </div>
-                <div class="title">Our Truck</div>
+                <div class="title">Install Guide</div>
               </div>
               <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
+          <a class="prev-page" href="index.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Home</div>
+                
+              </div>
+            </a>
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -271,9 +297,19 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to RC Design Bureau’s documentation!</a><ul>
-<li><a class="reference internal" href="#intro">Intro</a></li>
-<li><a class="reference internal" href="#contents">Contents</a></li>
+<li><a class="reference internal" href="#">Our Truck</a><ul>
+<li><a class="reference internal" href="#software">Software</a><ul>
+<li><a class="reference internal" href="#python">Python</a></li>
+<li><a class="reference internal" href="#rust">Rust</a></li>
+<li><a class="reference internal" href="#os">OS</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#hardware">Hardware</a><ul>
+<li><a class="reference internal" href="#truck">Truck</a></li>
+<li><a class="reference internal" href="#compute-element">Compute Element</a></li>
+<li><a class="reference internal" href="#d-printed-parts">3D Printed Parts</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
