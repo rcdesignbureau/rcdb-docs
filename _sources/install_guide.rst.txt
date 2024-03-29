@@ -53,6 +53,7 @@ Software
 Raspberry Pi 5 Model B
 ______________________
 
+
 Step 1
 ^^^^^^
 With your Raspberry Pi 5 Model B out of the box, insert the provided MicroSD card into the MicroSD card slot at the rear of the device.
