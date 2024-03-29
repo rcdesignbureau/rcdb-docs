@@ -9,12 +9,13 @@ Welcome to RC Design Bureau's documentation!
 
 Intro
 =====
-This is the documentation website for the RC Design Bureau! Read the materials here if you run into any problems or are installing for the first time!
+**This is the documentation website for the RC Design Bureau! Read the materials here if you run into any problems or are installing for the first time!**
 
 Contents
 ========
 .. toctree::
    install_guide
+   setup_guide
    software_troubleshooting
    hardware_troubleshooting
    :maxdepth: 2

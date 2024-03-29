@@ -13,12 +13,10 @@ _____________________
 Step 1
 ^^^^^^
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
 
 |
 Step 2
 ^^^^^^
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
 
 |
@@ -27,16 +25,28 @@ ________________________
 
 Step 1
 ^^^^^^
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+Get the two camera mounts (shown below), and mount the bottom pieces to the center hole of the front and rear shock towers, as shown in the image below:
+
+.. note::
+    Make sure to make the protrusions with the teeth face outward, i.e., away from the middle of the car.
+
+Insert Image
 
 |
 Step 2
 ^^^^^^
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+Disassemble your two webcams as shown in `this guide <https://www.youtube.com/watch?v=q0wWCd5nmfU>`_, following it until the mount removal at the 6-minute mark. Afterward, slide the upper half of the camera mount
+into the webcam, aligning it with the holes on the sides of the camera sensor, as shown in the picture below.
 
+Insert Image
 
+|
+Step 3
+^^^^^^
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+|
 Software
 ========
 
@@ -62,10 +72,15 @@ After making sure your Raspberry Pi 5 is not defective, screw the Raspberry Pi 5
 
 .. note::
     See image below for further details.
+
+Insert Image
+
 |
 Step 4
 ^^^^^^
 Now, attach the ESC and servo signal wires you spliced earlier to the Raspberry Pi 5's GPIO pins, as shown:
+
+Insert Image
 
 |
 Step 5
@@ -74,6 +89,8 @@ Finally, attach the USB webcams to the two USB 3.0 (blue) ports on the board. If
 
 .. note::
     See image below for further details.
+
+Insert Image
 
 |
 Step 6
@@ -90,6 +107,9 @@ First, after having un-boxed your ROCK 5B, plug in the compatible eMMC cartridge
 
 .. note::
     The eMMC cartridge port on the ROCK 5B has one side which is slightly shorter than the other. Make sure to align the cartridge with the board so that the white corner triangle is visible, as shown in the image.
+
+Insert Image
+
 |
 Step 2
 ^^^^^^
@@ -107,10 +127,14 @@ After making sure your ROCK 5B is not defective, screw the ROCK 5B into the case
 .. note::
     See image below for further details.
 
+Insert Image
+
 |
 Step 4
 ^^^^^^
 Now, attach the ESC and servo signal wires you spliced earlier to the ROCK 5B's GPIO pins, as shown:
+
+Insert Image
 
 |
 Step 5
@@ -119,6 +143,8 @@ Finally, attach the USB webcams to the two USB 3.0 (blue) ports on the board. If
 
 .. note::
     See image below for further details.
+
+Insert Image
 
 |
 Step 6
