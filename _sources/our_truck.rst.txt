@@ -1,12 +1,12 @@
-#########
+=========
 Our Truck
-#########
+=========
 
-**This project seeks to take an RC offroad race truck and make it drive itself!**
+**These are the docs for our current experimental truck, the first our company will ever build.**
 
 
 Software
-########
+========
 
 Python
 ______
@@ -29,7 +29,7 @@ upload pre-compiled binaries and thus have to install bulky GNU ARM toolchains t
 
 
 Hardware
-########
+========
 
 Truck
 _____
