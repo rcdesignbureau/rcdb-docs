@@ -9,7 +9,7 @@ import datetime as dt
 
 project = 'RC Design Bureau'
 copyright = f"{dt.datetime.now().strftime('%Y')}, RC Design Bureau" # Updates the copyright to the current year
-author = "Alessandro Bonecchi, Antonio O'Hara, Eddie O'Hara, Johann Webber at RC Design Bureau"
+author = "Alessandro Bonecchi, Antonio O'Hara, Eddie O'Hara, and Johann Webber at RC Design Bureau"
 
 # -- General configuration ---------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#general-configuration
@@ -22,3 +22,4 @@ exclude_patterns = []
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
 html_theme = 'furo'
+html_logo = 'logo.png'
