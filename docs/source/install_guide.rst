@@ -12,12 +12,26 @@ _____________________
 
 Step 1
 ^^^^^^
-Get all your 3D Printed parts from `here <thingiverse.com>`_. 
+Get all your 3D Printed parts from `here <thingiverse.com>`_. All parts will be in the preffered print orientation once downloaded. 
+FDM Printing is preffered. 
 
 |
 Step 2
 ^^^^^^
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+Process 3d printed parts accordingly: 
+
+Support removal
+Never use excessive force to remove supports. There will be some suppports required for these parts. 
+`3d Print Support: How to Remove Hard Supports from 3D Prints <https://all3dp.com/2/3d-print-remove-support-hard-to-remove/>`_.
+
+Necessary print detailing 
+The only necessary print detailing should be light filing and small xacto knife work to ensure that all screws fit well. 
+`How to Clean Up 3D Prints: FDM & Resin Parts <https://all3dp.com/2/cleaning-3d-prints-post-processing/>`_.
+
+Optional print detailing. 
+Excessive cosmetic detailing should not be done in/near critical parts of the prints that need to fit together or bolt onto a part of the car.
+As long as the parts are fit securely and have sufficient structure to them, they are free to be detailed.
+`Smoothest 3D Print – How To Smooth 3D Prints <https://www.xometry.com/resources/3d-printing/smooth-3d-prints/#:~:text=Using%20Paint%20and%20Sanding%20Material,process%20as%20sanding%20other%20products.>`_.
 
 |
 Tekno RC SCT410 (non-SL)
@@ -25,18 +39,22 @@ ________________________
 
 Step 1
 ^^^^^^
-Get the two camera mounts (shown below), and mount the bottom pieces to the center hole of the front and rear shock towers, as shown in the image below:
+To mount the Webcams, start by unscrewing the M3x10 from the center hole of the shock towers from the body mounts. 
+Get the two camera mounts (shown below) and press them in so that they align with the center hole of the front and rear shock towers, as shown in the image below:
 
 .. note::
     Make sure to make the protrusions with the teeth face outward, i.e., away from the middle of the car.
 
 Insert Image
 
-|
+Replace the M3x10 that was unscrewed previously; make sure to go through the 3d printed part with the head of the screw facing away from the center of the car.
+The M3X10 will not ne long enough to fill the end of its threads as it once did. This is normal and will have no effect on the performance of the car. 
+If the length of the screw is concerning, feel free to replace it with a screw no larger than M3X12 that shares the same thread pitch as the original M3x10.
+
 Step 2
 ^^^^^^
 Disassemble your two webcams as shown in `this guide <https://www.youtube.com/watch?v=q0wWCd5nmfU>`_, following it until the mount removal at the 6-minute mark. Afterward, slide the upper half of the camera mount
-into the webcam, aligning it with the holes on the sides of the camera sensor, as shown in the picture below.
+into the webcam, aligning it with the holes on the sides of the camera sensor, as shown in the picture below. Finally replace the screws and reassemble the camera.
 
 Insert Image
 
@@ -44,7 +62,10 @@ Insert Image
 Step 3
 ^^^^^^
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+The webcameras are secured using a single M3 screw of sufficient length and either a standard or Nylock M3 nut. 
+The webcameras should be placed so that the center of the sensor aligns with the center of the car and faces forward (or rearward if on the rear of the car)
+
+Insert Image
 
 |
 Software
