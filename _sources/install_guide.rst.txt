@@ -12,7 +12,7 @@ _____________________
 
 Step 1
 ^^^^^^
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.
+Get all your 3D Printed parts from `here <thingiverse.com>`_. 
 
 |
 Step 2
