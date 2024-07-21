@@ -18,4 +18,5 @@ Contents
    setup_guide
    software_troubleshooting
    hardware_troubleshooting
+   download
    :maxdepth: 2
