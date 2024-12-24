@@ -19,8 +19,7 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install sphinx
-        pip install sphinx-rtd-theme  # or your chosen theme
-        sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra latexmk
+        sudo apt-get install texlive-latex-recommended texlive-fonts-recommended
 
     # Build HTML
     - name: Build HTML
@@ -29,7 +28,6 @@ jobs:
     # Build LaTeX PDF
     - name: Build LaTeX PDF
       run: |
-        sphinx-build -b latex docs/source docs/build/latex
         cd docs
         make latexpdf
 
