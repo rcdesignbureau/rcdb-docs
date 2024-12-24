@@ -25,18 +25,20 @@ jobs:
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
 
-    # Build LaTeX PDF
-    - name: Build LaTeX PDF
-      run: |
-        cd docs
-        make latexpdf
-
     # Upload artifacts (HTML)
     - name: Upload HTML artifacts
       uses: actions/upload-artifact@v4
       with:
         name: rcdb-docs-html
         path: docs/build/html/
+
+    # Build LaTeX PDF
+    - name: Build LaTeX PDF
+      run: |
+        mkdir -p docs/build/latex 
+        chmod -R 777 docs/build/latex
+        cd docs
+        make latexpdf
 
     # Upload artifacts (PDF)
     - name: Upload PDF artifact
