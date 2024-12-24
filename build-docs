@@ -1,9 +1,9 @@
 #! /bin/bash
 
-cd docs
+cd /mnt/f/General_Storage/rcdb-docs/docs
 make html
 make latexpdf
-cd build/html
+cd /mnt/f/General_Storage/rcdb-docs/docs/build/html
 zip -r rcdb-docs-html.zip *
 mv rcdb-docs-html.zip ../../..
 cd ../latex
