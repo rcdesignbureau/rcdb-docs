@@ -38,7 +38,7 @@ jobs:
         mkdir -p /tmp/latex_build
         sphinx-build -b latex docs/source /tmp/latex_build 
         cd /tmp/latex_build 
-        pdflatex rcdb-docs.tex
+        make latexpdf
 
     # Upload artifacts (PDF)
     - name: Upload PDF artifact
