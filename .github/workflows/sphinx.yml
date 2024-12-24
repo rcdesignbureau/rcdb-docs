@@ -2,10 +2,6 @@ name: "Build Docs"
 
 on: push
 
-permissions:
-  contents: write
-  issues: write
-
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,6 +36,8 @@ jobs:
     - name: Build PDF
       run: |
         cd docs
+        mkdir build/latex
+        chmod -R 755 build/latex
         make latexpdf
 
     # Upload artifacts (PDF)
