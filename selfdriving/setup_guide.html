@@ -3,13 +3,13 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="Hardware Troubleshooting" href="hardware_troubleshooting.html" /><link rel="prev" title="Setup Guide" href="setup_guide.html" />
+<link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" />
 
-    <link rel="shortcut icon" href="_static/favicon.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
-        <title>Software Troubleshooting - RC Design Bureau documentation</title>
-      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=a746c00c" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?v=135e06be" />
-    <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?v=36a5483c" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/><!-- Generated with Sphinx 7.1.2 and Furo 2024.01.29 -->
+        <title>Setup Guide - RCDB Docs documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=a746c00c" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo.css?v=135e06be" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/furo-extensions.css?v=36a5483c" />
     
     
 
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="index.html"><div class="brand">RC Design Bureau  documentation</div></a>
+      <a href="../index.html"><div class="brand">RCDB Docs  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,26 +143,23 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
   
   <div class="sidebar-logo-container">
-    <img class="sidebar-logo" src="_static/logo.png" alt="Logo"/>
+    <img class="sidebar-logo" src="../_static/logo.png" alt="Logo"/>
   </div>
   
-  <span class="sidebar-brand-text">RC Design Bureau  documentation</span>
+  <span class="sidebar-brand-text">RCDB Docs  documentation</span>
   
-</a><form class="sidebar-search-container" method="get" action="search.html" role="search">
+</a><form class="sidebar-search-container" method="get" action="../search.html" role="search">
   <input class="sidebar-search" placeholder="Search" name="q" aria-label="Search">
   <input type="hidden" name="check_keywords" value="yes">
   <input type="hidden" name="area" value="default">
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
-  <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="install_guide.html">Install Guide</a></li>
-<li class="toctree-l1"><a class="reference internal" href="setup_guide.html">Setup Guide</a></li>
-<li class="toctree-l1 current current-page"><a class="current reference internal" href="#">Software Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="hardware_troubleshooting.html">Hardware Troubleshooting</a></li>
-<li class="toctree-l1"><a class="reference internal" href="download.html">Download and Instructions</a></li>
+  <ul>
+<li class="toctree-l1"><a class="reference internal" href="selfdriving.html">Self-Driving Car Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../download.html">Download and Instructions</a></li>
 </ul>
 
 </div>
@@ -197,34 +194,44 @@
           </label>
         </div>
         <article role="main">
-          <section id="software-troubleshooting">
-<h1>Software Troubleshooting<a class="headerlink" href="#software-troubleshooting" title="Permalink to this heading">#</a></h1>
-<section id="commonly-encountered-errors">
-<h2>Commonly Encountered Errors<a class="headerlink" href="#commonly-encountered-errors" title="Permalink to this heading">#</a></h2>
+          <section id="setup-guide">
+<h1>Setup Guide<a class="headerlink" href="#setup-guide" title="Permalink to this heading">#</a></h1>
+<p><strong>This guide is for setting up the software on the car.</strong></p>
+<section id="raspberry-pi-5-model-b">
+<h2>Raspberry Pi 5 Model B<a class="headerlink" href="#raspberry-pi-5-model-b" title="Permalink to this heading">#</a></h2>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<section id="device-not-powering-on">
-<h3>Device not powering on<a class="headerlink" href="#device-not-powering-on" title="Permalink to this heading">#</a></h3>
-<p>Make sure your power cable is plugged in and for ROCK 5B users, that you pressed the power button (the left-most of the two outward-facing small ones).</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>If you smell fumes from the device, cut power to it immediately and equip yourself with your nearest fire extinguisher.</p>
-</div>
-<div class="line-block">
-<div class="line"><br /></div>
-</div>
-</section>
-<section id="car-is-not-driving-correctly-as-if-the-field-of-view-is-narrow">
-<h3>Car is not driving correctly, as if the field of view is narrow.<a class="headerlink" href="#car-is-not-driving-correctly-as-if-the-field-of-view-is-narrow" title="Permalink to this heading">#</a></h3>
-<p>Make sure the webcams are plugged in and that the management console at <code class="docutils literal notranslate"><span class="pre">IP:PORT</span></code> is showing. If not, plug the car’s HDMI port into a monitor, attach a keyboard and mouse, and boot into the desktop. From there it is possible to setup the Wi-Fi connection.</p>
+<section id="step-1">
+<h3>Step 1<a class="headerlink" href="#step-1" title="Permalink to this heading">#</a></h3>
+<p>Lorem ipsum sin dolor amet.</p>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
 </section>
-<section id="error-3">
-<h3>Error 3<a class="headerlink" href="#error-3" title="Permalink to this heading">#</a></h3>
-<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Tellus rutrum tellus pellentesque eu tincidunt tortor aliquam.</p>
+<section id="step-2">
+<h3>Step 2<a class="headerlink" href="#step-2" title="Permalink to this heading">#</a></h3>
+<p>Lorem ipsum sin dolor amet.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+</section>
+<section id="radxa-rock-5b">
+<h2>Radxa ROCK 5B<a class="headerlink" href="#radxa-rock-5b" title="Permalink to this heading">#</a></h2>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<section id="id1">
+<h3>Step 1<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Lorem ipsum sin dolor amet.</p>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+</section>
+<section id="id2">
+<h3>Step 2<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Lorem ipsum sin dolor amet.</p>
 </section>
 </section>
 </section>
@@ -234,26 +241,8 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="hardware_troubleshooting.html">
-              <div class="page-info">
-                <div class="context">
-                  <span>Next</span>
-                </div>
-                <div class="title">Hardware Troubleshooting</div>
-              </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-            </a>
-          <a class="prev-page" href="setup_guide.html">
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
-              <div class="page-info">
-                <div class="context">
-                  <span>Previous</span>
-                </div>
-                
-                <div class="title">Setup Guide</div>
-                
-              </div>
-            </a>
+          
+          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -284,11 +273,15 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Software Troubleshooting</a><ul>
-<li><a class="reference internal" href="#commonly-encountered-errors">Commonly Encountered Errors</a><ul>
-<li><a class="reference internal" href="#device-not-powering-on">Device not powering on</a></li>
-<li><a class="reference internal" href="#car-is-not-driving-correctly-as-if-the-field-of-view-is-narrow">Car is not driving correctly, as if the field of view is narrow.</a></li>
-<li><a class="reference internal" href="#error-3">Error 3</a></li>
+<li><a class="reference internal" href="#">Setup Guide</a><ul>
+<li><a class="reference internal" href="#raspberry-pi-5-model-b">Raspberry Pi 5 Model B</a><ul>
+<li><a class="reference internal" href="#step-1">Step 1</a></li>
+<li><a class="reference internal" href="#step-2">Step 2</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#radxa-rock-5b">Radxa ROCK 5B</a><ul>
+<li><a class="reference internal" href="#id1">Step 1</a></li>
+<li><a class="reference internal" href="#id2">Step 2</a></li>
 </ul>
 </li>
 </ul>
@@ -302,9 +295,9 @@
       
     </aside>
   </div>
-</div><script data-url_root="./" id="documentation_options" src="_static/documentation_options.js?v=b3ba4146"></script>
-    <script src="_static/doctools.js?v=888ff710"></script>
-    <script src="_static/sphinx_highlight.js?v=4825356b"></script>
-    <script src="_static/scripts/furo.js?v=32e29ea5"></script>
+</div><script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js?v=b3ba4146"></script>
+    <script src="../_static/doctools.js?v=888ff710"></script>
+    <script src="../_static/sphinx_highlight.js?v=4825356b"></script>
+    <script src="../_static/scripts/furo.js?v=32e29ea5"></script>
     </body>
 </html>

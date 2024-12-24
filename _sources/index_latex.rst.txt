@@ -14,6 +14,9 @@ Intro
 Contents
 ========
 .. toctree::
-   selfdriving/selfdriving
-   download
+   selfdriving/install_guide
+   selfdriving/setup_guide
+   selfdriving/our_truck
+   selfdriving/hardware_troubleshooting
+   selfdriving/software_troubleshooting
    :maxdepth: 2
