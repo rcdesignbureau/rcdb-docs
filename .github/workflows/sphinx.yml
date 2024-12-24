@@ -7,6 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      actions: write
+      deployments: write
+      issues: write
+
     steps:
     - uses: actions/checkout@v4
 
@@ -32,21 +36,6 @@ jobs:
         name: HTML Documentation
         path: docs/build/html/
 
-    # Build PDF
-    - name: Build PDF
-      run: |
-        cd docs
-        mkdir build/latex
-        chmod -R 755 build/latex
-        make latexpdf
-
-    # Upload artifacts (PDF)
-    - name: Upload PDF
-      uses: actions/upload-artifact@v4
-      with:
-        name: PDF Documentation
-        path: docs/build/latex/rcdb-docs.pdf
-
     # Deploy
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
@@ -54,3 +43,17 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: docs/build/html
+
+    # Build PDF
+    - name: Build PDF
+      uses: ammaraskar/sphinx-action@master
+      with:
+        pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-fonts-recommended"
+        build-command: "make latexpdf"
+
+    # Upload artifacts (PDF)
+    - name: Upload PDF
+      uses: actions/upload-artifact@v4
+      with:
+        name: PDF Documentation
+        path: docs/build/latex/rcdb-docs.pdf
