@@ -2,7 +2,10 @@
 
 cd docs
 make html
+make latexpdf
 cd build/html
-zip -r rcdb-docs.zip *
-mv rcdb-docs.zip ../../..
+zip -r rcdb-docs-html.zip *
+mv rcdb-docs-html.zip ../../..
+cd ../latex
+mv rcdb-docs.pdf ../../..
 cd ../../..
