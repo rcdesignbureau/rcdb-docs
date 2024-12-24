@@ -9,13 +9,45 @@ jobs:
       contents: write
     steps:
     - uses: actions/checkout@v4
+
+    # Install dependencies
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install sphinx
+        pip install sphinx-rtd-theme  # or your chosen theme
+        sudo apt-get install -y texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra latexmk
+
+    # Build HTML
     - name: Build HTML
       uses: ammaraskar/sphinx-action@master
-    - name: Upload artifacts
+
+    # Build LaTeX PDF
+    - name: Build LaTeX PDF
+      run: |
+        sphinx-build -b latex docs/source docs/build/latex
+        cd docs
+        make latexpdf
+
+    # Upload artifacts (HTML)
+    - name: Upload HTML artifacts
       uses: actions/upload-artifact@v4
       with:
-        name: rcdb-docs
+        name: rcdb-docs-html
         path: docs/build/html/
+
+    # Upload artifacts (PDF)
+    - name: Upload PDF artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: PDF Documentation
+        path: docs/build/latex/rcdb-docs.pdf
+
+    # Deploy
     - name: Deploy
       uses: peaceiris/actions-gh-pages@v3
       if: github.ref == 'refs/heads/main'
