@@ -35,10 +35,10 @@ jobs:
     # Build LaTeX PDF
     - name: Build LaTeX PDF
       run: |
-        mkdir -p docs/build/latex 
-        chmod -R 777 docs/build/latex
-        cd docs
-        make latexpdf
+        mkdir -p /tmp/latex_build
+        sphinx-build -b latex docs/source /tmp/latex_build 
+        cd /tmp/latex_build 
+        latexmk -pdf rcdb-docs.tex
 
     # Upload artifacts (PDF)
     - name: Upload PDF artifact
