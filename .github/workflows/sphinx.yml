@@ -39,14 +39,12 @@ jobs:
       with:
         docs-folder: "docs"
         pre-build-command: "touch /tmp/sphinx-log"
-        build-command: "sphinx-build source build -b latex"
+        build-command: "sphinx-build source build/latex -b latex"
 
     - name: Make PDF
       run: |
         apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
-        ls docs
-        cd docs
-        ls build
+        cd docs/build/latex
         make
 
     # Upload artifacts (PDF)
