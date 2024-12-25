@@ -37,9 +37,9 @@ jobs:
     - name: Build PDF
       uses: ammaraskar/sphinx-action@master
       with:
-        docs-folder: "docs/source"
+        docs-folder: "docs"
         pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && touch /tmp/sphinx-log"
-        build-command: "make latexpdf"
+        build-command: "sphinx-build source build -b latex -w /tmp/sphinx-log && cd build/latex && make"
 
     # Upload artifacts (PDF)
     - name: Upload PDF
