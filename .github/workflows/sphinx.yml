@@ -43,7 +43,7 @@ jobs:
 
     - name: Make PDF
       run: |
-        apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
+        apt-get update && apt-get install latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended
         cd docs/build/latex
         make
 
