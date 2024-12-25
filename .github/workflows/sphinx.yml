@@ -44,7 +44,7 @@ jobs:
     - name: Make PDF
       uses: xu-cheng/texlive-action@v2
       with:
-        scheme: small
+        scheme: full
         run: |
           cd docs/build/latex
           make
