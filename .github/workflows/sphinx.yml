@@ -42,9 +42,12 @@ jobs:
         build-command: "sphinx-build source build/latex -b latex"
 
     - name: Make PDF
-      run: |
-        cd docs/build/latex
-        make
+      uses: xu-cheng/texlive-action@v2
+      with:
+        scheme: full
+        run: |
+          cd docs/build/latex
+          make
 
     # Upload artifacts (PDF)
     - name: Upload PDF
