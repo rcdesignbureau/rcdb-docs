@@ -10,5 +10,4 @@ Contents
 | `Setup Guide <./setup_guide.html>`_
 | `Hardware Troubleshooting <./hardware_troubleshooting.html>`_
 | `Software Troubleshooting <./software_troubleshooting.html>`_
-| `Our Truck <./our_truck.html>`_
 
