@@ -7,7 +7,7 @@ import datetime as dt
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
-project = 'RCDB Docs'
+project = 'RC Design Bureau'
 copyright = f"{dt.datetime.now().strftime('%Y')}, RC Design Bureau" # Updates the copyright to the current year
 author = "Alessandro Bonecchi, Antonio O'Hara, Eddie O'Hara"
 
