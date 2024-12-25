@@ -34,16 +34,12 @@ jobs:
         publish_dir: docs/build/html
 
     # Build PDF
-    - name: Build LaTeX
+    - name: Build PDF
       uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "docs"
         pre-build-command: "apt-get update -y && apt-get install -y latexmk texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended && touch /tmp/sphinx-log"
         build-command: "sphinx-build source build -b latex"
-
-    - name: Compile PDF
-      run:
-        cd /home/runner/work/rcdb-docs/docs/build/latex && make
 
     # Upload artifacts (PDF)
     - name: Upload PDF
