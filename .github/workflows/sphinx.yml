@@ -43,7 +43,7 @@ jobs:
 
     - name: Make PDF
       run: |
-        ls
+        ls docs
         cd docs/build/latex
         make
 
