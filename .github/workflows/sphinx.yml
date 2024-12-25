@@ -49,9 +49,24 @@ jobs:
           cd docs/build/latex
           make
 
-    # Upload artifacts (PDF)
-    - name: Upload PDF
-      uses: actions/upload-artifact@v4
+    # Upload and release artifacts (PDF)
+    - name: Create Release
+      uses: actions/create-release@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
-        name: PDF Documentation
-        path: docs/build/latex/rcdb-docs.pdf
+        tag_name: ${{ github.run_number }}-${{ github.event.repository.name }}
+        release_name: Release ${{ github.run_number }}-${{ github.event.repository.name }}
+        body: "This is an automated release of the RCDB PDF Documentation"
+        draft: false
+        prerelease: false
+
+    - name: Upload PDF
+      uses: actions/upload-release-asset@v1
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+        upload_url: ${{ steps.create_release.outputs.upload_url }}
+        asset_path: "docs/source/build/latex/rcdb-docs.pdf"
+        asset_name: "rcdb-docs.pdf"
+        asset_content_type: "application/pdf"
