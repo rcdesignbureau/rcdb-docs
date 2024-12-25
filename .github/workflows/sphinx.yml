@@ -43,7 +43,7 @@ jobs:
 
     - name: Compile PDF
       run:
-        cd ${{ github.workspace }}/docs/build/latex && make
+        cd ${{ github.workspace }}/../docs/build/latex && make
 
     # Upload artifacts (PDF)
     - name: Upload PDF
