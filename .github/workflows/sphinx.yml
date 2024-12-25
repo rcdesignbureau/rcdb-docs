@@ -44,7 +44,7 @@ jobs:
     - name: Make PDF
       run: |
         ls
-        cd build/latex
+        cd docs/build/latex
         make
 
     # Upload artifacts (PDF)
