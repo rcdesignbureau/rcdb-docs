@@ -26,3 +26,6 @@ Self-Driving Car Documentation
    selfdriving/hardware_troubleshooting
    selfdriving/software_troubleshooting
    :maxdepth: 2
+
+`Download <./download.html>`_
+_____________________________
