@@ -7,7 +7,9 @@ Self-Driving Car Documentation
 Contents
 ========
 | `Install Guide <./install_guide.html>`_
-| `Setup Guide <./setup_guide.html>`_
-| `Hardware Troubleshooting <./hardware_troubleshooting.html>`_
-| `Software Troubleshooting <./software_troubleshooting.html>`_
 
+| `Setup Guide <./setup_guide.html>`_
+
+| `Hardware Troubleshooting <./hardware_troubleshooting.html>`_
+
+| `Software Troubleshooting <./software_troubleshooting.html>`_
