@@ -14,6 +14,7 @@ Intro
 Contents
 ========
 .. toctree::
+   parts/parts
    selfdriving/selfdriving
    download
    :maxdepth: 2

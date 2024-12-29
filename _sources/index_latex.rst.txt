@@ -7,16 +7,18 @@
 Welcome to RC Design Bureau's documentation!
 ============================================
 
-Intro
-=====
-**This is the documentation website for the RC Design Bureau! Read the materials here if you run into any problems or are installing for the first time!**
+Parts Documentation
+===================
+.. toctree::
+   parts/a-arms
+   parts/steering_bellcranks
+   :maxdepth: 2
 
-Contents
-========
+Self-Driving Car Documentation
+==============================
 .. toctree::
    selfdriving/install_guide
    selfdriving/setup_guide
-   selfdriving/our_truck
    selfdriving/hardware_troubleshooting
    selfdriving/software_troubleshooting
    :maxdepth: 2
