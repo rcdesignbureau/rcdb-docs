@@ -1,4 +1,5 @@
 import datetime as dt
+
 # Configuration file for the Sphinx documentation builder.
 #
 # For the full list of built-in configuration values, see the documentation:
@@ -28,10 +29,21 @@ html_favicon = 'assets/favicon.ico'
 
 # -- Options for LaTeX output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-latex-output
+
 latex_engine = 'pdflatex'
-latex_documents = [('index_latex', 'rcdb-docs.tex', 'RC Design Bureau Documentation', "Alessandro Bonecchi, Antonio O'Hara, and Eddie O'Hara", 'manual', False)]
+latex_documents = [
+    ('index_latex', 'rcdb-docs.tex', 'RC Design Bureau Documentation', "Alessandro Bonecchi, Antonio O'Hara, Eddie O'Hara", 'manual', False)
+]
 latex_elements = {
     'documentclass': 'article',
     'papersize': 'letterpaper',
-    'extraclassoptions': 'openany'
+    'extraclassoptions': 'openany',
+    'preamble': r'''
+        \setcounter{secnumdepth}{0}
+        \usepackage{titlesec}
+        \titlespacing*{\section}{0pt}{*8}{*8}
+        \titlespacing*{\subsection}{0pt}{*5}{*5}
+        \titlespacing*{\subsubsection}{0pt}{*2}{*2}
+    '''
 }
+
