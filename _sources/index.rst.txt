@@ -11,6 +11,10 @@ Intro
 =====
 **This is the documentation website for the RC Design Bureau! Read the materials here if you run into any problems or are installing for the first time!**
 
+`Download Offline Docs <./download.html>`_
+__________________________________________
+
+
 Parts Documentation
 ===================
 .. toctree::
@@ -26,6 +30,3 @@ Self-Driving Car Documentation
    selfdriving/hardware_troubleshooting
    selfdriving/software_troubleshooting
    :maxdepth: 2
-
-`Download <./download.html>`_
-_____________________________
