@@ -10,15 +10,6 @@ Welcome to RC Design Bureau's documentation!
 Parts Documentation
 ===================
 .. toctree::
-   parts/a-arms
    parts/steering_bellcranks
-   :maxdepth: 2
-
-Self-Driving Car Documentation
-==============================
-.. toctree::
-   selfdriving/install_guide
-   selfdriving/setup_guide
-   selfdriving/hardware_troubleshooting
-   selfdriving/software_troubleshooting
+   parts/a-arms
    :maxdepth: 2
